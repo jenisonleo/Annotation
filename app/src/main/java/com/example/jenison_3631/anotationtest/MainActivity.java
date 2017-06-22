@@ -11,7 +11,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TestObjectClass objectClass=new TestObjectClass();
-        Log.e("return"," "+objectClass.test(3));
+        //the method test is annotated to accept only values 1,2,3
+        //This would still compile and genrate the class and object codes but would throw a compilation error to the IDE
+        Log.e("return"," "+objectClass.test(4));//NO I18N
+        Log.e("return"," "+objectClass.test(3));//NO I18N
+
     }
 
 
